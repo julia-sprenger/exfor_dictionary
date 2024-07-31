@@ -3440,6 +3440,12 @@
         "publisher_name": "International Atomic Energy Agency (IAEA), Vienna",
         "active": true
       },
+      "INDC(TUK)-": {
+        "description": "Turkish report to the I.N.D.C.",
+        "publisher": "3ZZZIAE",
+        "publisher_name": "International Atomic Energy Agency (IAEA), Vienna",
+        "active": true
+      },
       "INDC(TUR)-": {
         "description": "Turkish report to the I.N.D.C.",
         "publisher": "3ZZZIAE",
