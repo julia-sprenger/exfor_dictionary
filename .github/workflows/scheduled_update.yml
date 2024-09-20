@@ -1,0 +1,46 @@
+# This workflow attempts to update the repository with the latest trans files on a regular basis
+
+name: Scheduled Update
+
+on:
+  schedule:
+  # run updates once per week
+    - cron: '30 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Install dependencies
+      run: |
+        python -m ensurepip --upgrade
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade setuptools
+        pip3 install --upgrade pip
+        pip3 install -e .
+    - name: Update repo
+      env: # Or as an environment variable
+        OPENAREA_USER: ${{ secrets.OPENAREA_USER }}
+        OPENAREA_PWD: ${{ secrets.OPENAREA_PWD }}
+      run: |
+        python src/exfor_dictionary/convert_dictionary.py
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        author_email: github-actions@example.com
+        message: 'Scheduled update'
+        add: |
+          - 'src/exfor_dictionary/trans_json/*'
+          - 'src/exfor_dictionary/latest.json'

@@ -1970,6 +1970,10 @@
         "description": "Fuji Electric",
         "active": true
       },
+      "2JPNFMU": {
+        "description": "Fukushima Medical University, Fukushima",
+        "active": true
+      },
       "2JPNFUK": {
         "description": "Fukuoka University , Fukuoka",
         "active": true
@@ -3111,7 +3115,7 @@
         "active": false
       },
       "3CLMCLM": {
-        "description": "Columbia, Rep.",
+        "description": "Colombia, Rep.",
         "active": true
       },
       "3CLMIAN": {
@@ -4459,7 +4463,7 @@
         "active": false
       },
       "4CCPGKS": {
-        "description": " State Committee on Standards, Moscow",
+        "description": "State Committee on Standards, Moscow",
         "active": false
       },
       "4CCPGOR": {
@@ -4963,7 +4967,7 @@
         "active": true
       },
       "4UZ UZB": {
-        "description": "Institute Yadernoi Fiziki Uzbekskoi A.N., Tashkent",
+        "description": "Institute of Nuclear Physics, Tashkent",
         "active": true
       },
       "4ZZZDUB": {
